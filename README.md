@@ -1,1 +1,2 @@
-# calculator
+# Calculator
+This project implements an interactive web calculator using JavaScript, HTML5 and CSS3. Its goal is to provide a simple and efficient tool to perform basic mathematical operations in an intuitive way through an easy-to-use user interface.

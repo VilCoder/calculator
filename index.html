@@ -6,11 +6,73 @@
 
     <link rel="stylesheet" href="./assets/css/styles.css">
 
-    <script src="./assets/js/main.js" defer></script>
+    <script defer src="./assets/js/main.js"></script>
     
     <title>Calculator</title>
 </head>
+
 <body>
-    
+    <div class="calculator">
+        <div class="calculator__result">0</div>
+        
+        <div class="calculator__item">
+            <button type="button" id="c" class="calculator__button">C</button>
+        </div>
+        <div class="calculator__item">
+            <button type="button" id="/" class="calculator__button calculator__button--symbol" style="font-size: 25px;">&#xF7</button>
+        </div>
+        <div class="calculator__item">
+            <button type="button" id="*" class="calculator__button calculator__button--symbol">x</button>
+        </div>
+        <div class="calculator__item">
+            <button type="button" id="delete" class="calculator__button calculator__button--symbol">&#9003</button>
+        </div>
+        <div class="calculator__item">
+            <button type="button" id="7" class="calculator__button calculator__button--number">7</button>
+        </div>
+        <div class="calculator__item">
+            <button type="button" id="8" class="calculator__button calculator__button--number">8</button>
+        </div>
+        <div class="calculator__item">
+            <button type="button" id="9" class="calculator__button calculator__button--number">9</button>
+        </div>
+        <div class="calculator__item">
+            <button type="button" id="−" class="calculator__button calculator__button--symbol">&minus;</button>
+        </div>
+        <div class="calculator__item">
+            <button type="button" id="4" class="calculator__button calculator__button--number">4</button>
+        </div>
+        <div class="calculator__item">
+            <button type="button" id="5" class="calculator__button calculator__button--number">5</button>
+        </div>
+        <div class="calculator__item">
+            <button type="button" id="6" class="calculator__button calculator__button--number">6</button>
+        </div>
+        <div class="calculator__item">
+            <button type="button" id="+" class="calculator__button calculator__button--symbol">&plus;</button>
+        </div>
+        <div class="calculator__item">
+            <button type="button" id="1" class="calculator__button calculator__button--number">1</button>
+        </div>
+        <div class="calculator__item">
+            <button type="button" id="2" class="calculator__button calculator__button--number">2</button>
+        </div>
+        <div class="calculator__item">
+            <button type="button" id="3" class="calculator__button calculator__button--number">3</button>
+        </div>
+        <div class="calculator__item calculator__equal">
+            <button type="button" id="equal" class="calculator__button calculator__button--symbol calculator__equal--button">=</button>
+        </div>
+        <div class="calculator__item">
+            <button type="button" id="%" class="calculator__button calculator__button--number">%</button>
+        </div>
+        <div class="calculator__item">
+            <button type="button" id="0" class="calculator__button calculator__button--number">0</button>
+        </div>
+        <div class="calculator__item">
+            <button type="button" id="." class="calculator__button calculator__button--number">.</button>
+        </div>
+    </div>
+
 </body>
 </html>

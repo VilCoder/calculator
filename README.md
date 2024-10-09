@@ -9,6 +9,6 @@ Features
   - Multiplication
   - Division
 
--Minimalistic and responsive user interface for a smooth experience on mobile and desktop devices.
+- Minimalistic and responsive user interface for a smooth experience on mobile and desktop devices.
 
--Error handling to avoid invalid operations (such as division by zero).
+- Error handling to avoid invalid operations (such as division by zero).

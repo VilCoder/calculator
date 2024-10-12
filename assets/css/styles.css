@@ -40,6 +40,7 @@ body {
     background-color: var(--background-principal);
     border-radius: 1rem;
     color: var(--color-number);
+    line-height: 1rem;
 }
 
 .calculator__result {
@@ -59,7 +60,7 @@ body {
 .calculator__item {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
 
 .calculator__button {
@@ -80,6 +81,10 @@ body {
     background-color: rgb(255 255 255 / 0.13);
 }
 
+.calculator__button:active {
+    border: 1px solid #808080;
+}
+
 .calculator__button--symbol {
     color: var(--color-symbol);
 }
@@ -90,7 +95,7 @@ body {
 
 .calculator__equal--button {
     min-height: 97%;
-    height: 97%;
+    height: 100%;
     background-color: var(--color-symbol);
     border-radius: 3rem;
     color: var(--color-number);

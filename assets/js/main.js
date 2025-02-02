@@ -145,27 +145,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
         
     buttons.forEach(button => {        
-        button.addEventListener("mousedown", (event) => {
-            event.target.style.scale = 0.9;
-        });
-        
-        button.addEventListener("mouseup", (event) => {
-            event.target.style.scale = 1;
-        });
-        
         button.addEventListener("click", () => {
-            const clickedButton = button.textContent;
+            const clickedButton = button.id;
 
             // We only add if toggleDecimalButton returns true
             if (clickedButton === "." && !toggleDecimalButton()) {
                 return;  // Avoid adding the period is there is already one in the current number
             }
 
-            if (button.id === "c" || button.id === "delete") {
+            if (clickedButton === "c" || clickedButton=== "delete") {
 
-                reseatAritmeticCount(button.id);
+                reseatAritmeticCount(clickedButton);
 
-                deleteDisplay(button.id);
+                deleteDisplay(clickedButton);
                 
                 return;
             }
@@ -176,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 aritmeticCount++;
             }
             
-            if (button.id === "equal" || aritmeticCount === 2) {
+            if (clickedButton === "equal" || aritmeticCount === 2) {
                 try {
                     calculator(resultDisplay.textContent);
                 } catch (error) {

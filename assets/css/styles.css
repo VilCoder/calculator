@@ -30,7 +30,7 @@ body {
 
 
 /* =============== CALCULATOR =============== */
-.calculator { 
+.calculator {
     max-width: 95%;
     width: 40rem;
     display: grid;
@@ -64,25 +64,42 @@ body {
 }
 
 .calculator__button {
+    position: relative;
     width: 6rem;
     height: 6rem;
-    border-radius: 50%;
-    background-color: var(--background-secondary);
-    border: 0;
-    color: #F00;
-    cursor: pointer;
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
+    background: linear-gradient(135deg, #272727, var(--background-principal));
+    border: 0;
+    border-radius: 10px;
+    box-shadow: inset -8px 0 8px rgb(0 0 0 / 0.15),
+        inset 0 -8px 8px rgb(0 0 0 / 0.25),
+        5px 10px 15px rgb(0 0 0 / 0.5);
+    color: #F00;
+    cursor: pointer;
     line-height: 2rem;
 }
 
-.calculator__button:not(.calculator__equal--button):hover {
-    background-color: rgb(255 255 255 / 0.13);
+.calculator__button::before {
+    content: '';
+    position: absolute;
+    top: 0.5rem;
+    right: 0.8rem;
+    bottom: 1rem;
+    left: 0.4rem;
+    background: linear-gradient(135deg, var(--background-principal), #272727);
+    border-radius: 8px;
+    box-shadow: -5px -5px 5px rgb(0 0 0 / 0.25),
+        10px 5px 10px rgb(0 0 0 / 0.15),
+        0 0 1px rgb(0 0 0 / 0.25);
 }
 
 .calculator__button:active {
-    border: 1px solid #808080;
+    transform: scale(0.9);
+}
+.calculator__button:not(.calculator__equal--button):hover {
+    background-color: rgb(255 255 255 / 0.13);
 }
 
 .calculator__button--symbol {
@@ -90,17 +107,22 @@ body {
 }
 
 .calculator__button--number {
-    color:  inherit;
+    color: inherit;
 }
 
 .calculator__equal--button {
     min-height: 97%;
     height: 100%;
     background-color: var(--color-symbol);
-    border-radius: 3rem;
     color: var(--color-number);
 }
 
 .calculator__equal {
     grid-row: span 2;
+}
+
+.button__text {
+    display: block;
+    position: relative;
+    z-index: 1000;
 }
